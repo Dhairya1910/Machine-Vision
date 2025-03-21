@@ -88,7 +88,22 @@ import numpy as np
 # cv.waitKey(0)
 """--------------------------------------------------------------"""
 
-
-
-
-
+"""Edge Detection methods"""
+# img = cv.imread("Images/fuji.jpg")
+# cv.imshow("original",img)
+# gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+# # 1.canny edge detection algo 
+# canny = cv.Canny(gray,125,175)
+# cv.imshow("Canny Edge detection",canny)
+# # 2. Sobel edge detection algo
+# sobelx = cv.Sobel(gray,ddepth=cv.CV_64F,dx=1,dy=0)
+# sobely = cv.Sobel(gray,ddepth=cv.CV_64F,dx=0,dy=1)
+# sobelxy = cv.Sobel(gray,ddepth=cv.CV_64F,dx=1,dy=1)
+# cv.imshow("XY sobel",sobelxy)
+# cv.imshow("X sobel",sobelx)
+# cv.imshow("Y sobel",sobely)
+# # 3.Laplacian egde detection algorihtm 
+# lp = cv.Laplacian(gray,cv.CV_64F)
+# cv.imshow("Laplacian Image",lp)
+# cv.waitKey(0)
+"""reference material : https://homepages.inf.ed.ac.uk/rbf/HIPR2/canny.htm """
