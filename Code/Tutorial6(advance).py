@@ -21,7 +21,7 @@ import numpy as np
 # img = cv.resize(img,(255,255))
 # # 1. Averaging Blur
 # blurred_img = cv.blur(img,(5,5))
-# # 2. Gaussian Blur
+# # 2. Gaussian Blur weighed Blur
 # Gauss_img = cv.GaussianBlur(img,(5,5),1)
 # # 3. Median Blur 
 # Median_img = cv.medianBlur(img,5)
@@ -57,5 +57,38 @@ import numpy as np
 """--------------------------------------------------------------"""
 
 """Computing histogram"""
+# img = cv.imread("Image/fuji.jpg")
+# gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+
+# gray_hist = cv.calcHist([gray],[0],None,[256],[0,256])
+# plt.figure
+# plt.title("Grayscale Histogram")
+# plt.plot(gray_hist)
+# plt.show()
+"""--------------------------------------------------------------"""
+
+"""Types of thresholding in opencv"""
+
+# img = cv.imread("Images/fuji.jpg")
+# img = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+
+# # Simple Thresholding
+# threshold,thresh = cv.threshold(img,150,255,cv.THRESH_BINARY)
+# cv.imshow("Simple Threshold",thresh)
+
+# # otsu thresholding 
+# threshold , otsu_thresh = cv.threshold(img,0,255,cv.THRESH_BINARY | cv.THRESH_OTSU)
+# cv.imshow("Otsu Threshold",otsu_thresh)
+# print(threshold)
+
+# # Adaptive Thresholding
+# adp_thrsh = cv.adaptiveThreshold(img,255,cv.ADAPTIVE_THRESH_MEAN_C,cv.THRESH_BINARY,11,3)
+# cv.imshow("Adaptive Thresholding",adp_thrsh)
+
+# cv.waitKey(0)
+"""--------------------------------------------------------------"""
+
+
+
 
 
