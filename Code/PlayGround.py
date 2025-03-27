@@ -42,13 +42,8 @@ import numpy as np
 #     for (x,y,w,h) in face_cords:
 #         cv.rectangle(frame,(x,y),(x+w,y+h),color=(255,0,0),thickness=2)
 #         if cv.waitKey(1) == ord("d"):
-#             if x > y:
-#                 croped_img = frame[y:x,y+w:x+h]
-#                 print("X is greater")
-#                 cv.imshow("cap",croped_img)
-#             else: 
-#                 croped_img = frame[x:y,x+w:y+h]
-#                 cv.imshow("cap",croped_img)
+#             cropped = frame[y:y+h,x:x+w]
+#             cv.imshow("Cropped",cropped)
 
 #     cv.imshow("try",frame)
 #     if cv.waitKey(1) == ord('q'):
